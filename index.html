@@ -1,0 +1,913 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MedicGLP – Revolución Natural para tu Metabolismo</title>
+  
+  <!-- SEO & Metadados -->
+  <meta name="description" content="Fórmula natural para activar tu metabolismo, regular el apetito y apoyar el equilibrio de la glucosa de forma segura y sin estimulantes agresivos.">
+  <meta name="robots" content="index, follow">
+  
+  <!-- Open Graph / Redes Sociales -->
+  <meta property="og:type" content="product">
+  <meta property="og:title" content="MedicGLP – Revolución Natural para tu Metabolismo">
+  <meta property="og:description" content="Fórmula 100% natural con berberina, té verde y cromo que ayuda a regular el apetito y activar tu metabolismo.">
+  <meta property="og:image" content="https://imagedelivery.net/u8JiH5bJQTfO_tBFRSJ5Lg/34be69a4-748e-41d7-0713-de2b939cbf00/w=608,h=412,format=webp">
+  <meta property="og:locale" content="es_ES">
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="MedicGLP – Revolución Natural para tu Metabolismo">
+  <meta name="twitter:description" content="Fórmula natural para activar tu metabolismo y controlar los antojos.">
+  <meta name="twitter:image" content="https://imagedelivery.net/u8JiH5bJQTfO_tBFRSJ5Lg/34be69a4-748e-41d7-0713-de2b939cbf00/w=608,h=412,format=webp">
+
+  <!-- Estilos & Fuentes -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <style>
+    :root {
+      --primary: #2d6a4f;
+      --primary-light: #40916c;
+      --secondary: #d4af37;
+      --accent: #95d5b2;
+      --surface-light: #f8f9fa;
+      --surface-dark: #1b4332;
+      --text-dark: #212529;
+      --text-light: #f8f9fa;
+      --danger: #d90429;
+      --warning-light: #fff3cd;
+      --shadow-sm: 0 2px 8px rgba(0,0,0,0.06);
+      --shadow-md: 0 10px 30px rgba(0,0,0,0.08);
+      --shadow-lg: 0 20px 40px rgba(0,0,0,0.12);
+    }
+    body {
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+      color: var(--text-dark);
+      overflow-x: hidden;
+    }
+    /* Glassmorphism Navbar */
+    .navbar-glass {
+      background: rgba(255,255,255,0.85);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(0,0,0,0.05);
+      box-shadow: var(--shadow-sm);
+    }
+    .navbar-glass .nav-link {
+      color: var(--text-dark);
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    .navbar-glass .nav-link:hover {
+      color: var(--primary);
+    }
+    .navbar-glass .btn-cta {
+      padding: 0.5rem 1.5rem;
+      font-size: 0.9rem;
+    }
+    /* Hero Section */
+    .hero-section {
+      background: linear-gradient(135deg, #f0fdf4 0%, #d8f3dc 50%, #b7e4c7 100%);
+      padding: 6rem 0 4rem;
+    }
+    .hero-section h1 {
+      font-weight: 800;
+      line-height: 1.15;
+      color: var(--surface-dark);
+    }
+    .hero-section .lead {
+      color: #2d6a4f;
+      font-weight: 500;
+    }
+    /* Custom Card */
+    .card-custom {
+      background: #fff;
+      border-radius: 20px;
+      border: 1px solid rgba(0,0,0,0.04);
+      box-shadow: var(--shadow-md);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .card-custom:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+    }
+    /* CTA Button */
+    .btn-cta {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+      color: #fff;
+      font-weight: 700;
+      border: none;
+      border-radius: 50px;
+      padding: 0.8rem 2.2rem;
+      font-size: 1.1rem;
+      letter-spacing: 0.3px;
+      box-shadow: 0 8px 20px rgba(45,106,79,0.3);
+      transition: all 0.25s;
+      display: inline-block;
+      text-decoration: none;
+    }
+    .btn-cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 28px rgba(45,106,79,0.4);
+      color: #fff;
+    }
+    .btn-cta-outline {
+      background: transparent;
+      border: 2px solid var(--primary);
+      color: var(--primary);
+      font-weight: 700;
+      border-radius: 50px;
+      padding: 0.7rem 2rem;
+      transition: all 0.2s;
+    }
+    .btn-cta-outline:hover {
+      background: var(--primary);
+      color: #fff;
+    }
+    /* Section Alternating */
+    .section-alt {
+      background-color: #f4fbf7;
+    }
+    .section-dark {
+      background-color: var(--surface-dark);
+      color: var(--text-light);
+    }
+    /* Badge style */
+    .badge-feature {
+      background-color: rgba(45,106,79,0.1);
+      color: var(--primary);
+      font-weight: 600;
+      border-radius: 30px;
+      padding: 0.4em 1em;
+    }
+    /* Scam Alert */
+    .scam-alert {
+      border-left: 6px solid var(--danger);
+      background-color: #fff5f5;
+      border-radius: 12px;
+    }
+    /* Accordion */
+    .accordion-button:not(.collapsed) {
+      background-color: rgba(45,106,79,0.08);
+      color: var(--primary);
+      box-shadow: none;
+      font-weight: 600;
+    }
+    .accordion-button:focus {
+      box-shadow: none;
+      border-color: rgba(45,106,79,0.2);
+    }
+    .accordion-item {
+      border: none;
+      margin-bottom: 0.8rem;
+      border-radius: 12px !important;
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+    }
+    /* Compliance Modals */
+    [data-compliance-modal] {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 2000;
+    }
+    [data-compliance-modal]:not([hidden]) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .modal-backdrop-custom {
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.6);
+      backdrop-filter: blur(4px);
+    }
+    .modal-content-custom {
+      position: relative;
+      background: #fff;
+      border-radius: 20px;
+      max-width: 600px;
+      width: 90%;
+      max-height: 80vh;
+      overflow-y: auto;
+      padding: 2rem;
+      box-shadow: 0 25px 50px rgba(0,0,0,0.25);
+      z-index: 10;
+    }
+    .modal-close-btn {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      color: #555;
+      cursor: pointer;
+    }
+    /* Footer */
+    footer a {
+      color: #ccc;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    footer a:hover {
+      color: #fff;
+    }
+    /* Mobile sticky CTA */
+    #fp-sticky-cta {
+      display: none;
+    }
+    @media (max-width: 767.98px) {
+      html, body {
+        overflow-x: clip;
+      }
+      #fp-sticky-cta {
+        display: block;
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1040;
+        padding: 10px 16px calc(10px + env(safe-area-inset-bottom, 0px));
+        transform: translateY(100%);
+        visibility: hidden;
+        transition: transform .3s, visibility .3s;
+      }
+      #fp-sticky-cta.fp-on {
+        transform: none;
+        visibility: visible;
+      }
+      #fp-sticky-cta a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        min-height: 48px;
+        margin: 0;
+        box-sizing: border-box;
+        text-align: center;
+        box-shadow: 0 4px 14px rgba(0,0,0,.3);
+      }
+    }
+  </style>
+  <style id="fp-media-guard">@media (max-width:480px){img,video,iframe{max-width:100% !important;}}</style>
+
+  <!-- FLOWPAGES_SEO (Espanhol e Alinhado com o Conteúdo) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Product",
+        "name": "MedicGLP",
+        "description": "MedicGLP apoya el metabolismo, frena los antojos y equilibra la glucosa en sangre para un control de peso sostenible sin estimulantes agresivos. Formulado con extractos naturales de alta potencia como berberina, té verde y cromo. Envío gratuito y garantía de satisfacción de 30 días.",
+        "image": [
+          "https://imagedelivery.net/u8JiH5bJQTfO_tBFRSJ5Lg/34be69a4-748e-41d7-0713-de2b939cbf00/w=608,h=412,format=webp",
+          "https://imagedelivery.net/u8JiH5bJQTfO_tBFRSJ5Lg/cdc09dc9-766a-4997-819a-1d27d0407700/w=608,h=412,format=webp",
+          "https://imagedelivery.net/u8JiH5bJQTfO_tBFRSJ5Lg/fc8153ba-230c-462b-5d75-7a146dde4400/w=608,h=412,format=webp"
+        ],
+        "sku": "MedicGLP",
+        "category": "Salud, Nutrición, Suplementos Alimenticios",
+        "url": "https://www.firewolftrack.com/329S9ZBB/24QRJK1Q/",
+        "offers": {
+          "@type": "AggregateOffer",
+          "offerCount": 3,
+          "offers": [
+            {
+              "@type": "Offer",
+              "price": "69.95",
+              "priceCurrency": "EUR",
+              "availability": "https://schema.org/InStock",
+              "itemOffered": {
+                "@type": "Product",
+                "name": "MedicGLP Paquete Inicial (Suministro de 30 días)",
+                "description": "Contiene 1 frasco. Ideal para comenzar. Envío gratuito incluido.",
+                "image": "https://imagedelivery.net/u8JiH5bJQTfO_tBFRSJ5Lg/34be69a4-748e-41d7-0713-de2b939cbf00/w=608,h=412,format=webp"
+              }
+            },
+            {
+              "@type": "Offer",
+              "price": "59.95",
+              "priceCurrency": "EUR",
+              "availability": "https://schema.org/InStock",
+              "itemOffered": {
+                "@type": "Product",
+                "name": "MedicGLP Suministro de 2 Meses (60 días)",
+                "description": "Contiene 2 frascos. Ahorro superior al 40%. Envío gratuito incluido.",
+                "image": "https://imagedelivery.net/u8JiH5bJQTfO_tBFRSJ5Lg/cdc09dc9-766a-4997-819a-1d27d0407700/w=608,h=412,format=webp"
+              }
+            },
+            {
+              "@type": "Offer",
+              "price": "49.95",
+              "priceCurrency": "EUR",
+              "availability": "https://schema.org/InStock",
+              "itemOffered": {
+                "@type": "Product",
+                "name": "MedicGLP Paquete Más Vendido (90 días)",
+                "description": "Contiene 3 frascos. Mayor al 50% de ahorro. Envío gratuito y garantía de devolución de 30 días.",
+                "image": "https://imagedelivery.net/u8JiH5bJQTfO_tBFRSJ5Lg/fc8153ba-230c-462b-5d75-7a146dde4400/w=608,h=412,format=webp"
+              }
+            }
+          ]
+        },
+        "additionalProperty": [
+          {"@type": "PropertyValue", "name": "Garantía de Devolución de 30 Días", "value": "Sí, garantía de 30 días incluida"},
+          {"@type": "PropertyValue", "name": "Envío", "value": "Envío gratuito y seguro"},
+          {"@type": "PropertyValue", "name": "Fabricación", "value": "Instalaciones reguladas en la UE"},
+          {"@type": "PropertyValue", "name": "Ingredientes Principales", "value": "Berberina, Extracto de Té Verde, Picolinato de Cromo, Coenzima Q10, L-Carnitina, Complejo B"},
+          {"@type": "PropertyValue", "name": "Objetivo", "value": "Activar el metabolismo, quemar grasa, controlar apetito y equilibrar la glucosa"}
+        ]
+      },
+      {
+        "@type": "Review",
+        "author": {"@type": "Person", "name": "Lisa K."},
+        "reviewBody": "Gracias a MedicGLP he perdido 5 kilos en solo un mes. Me siento llena de energía y con mucha más confianza en mí misma.",
+        "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
+        "itemReviewed": {"@type": "Product", "name": "MedicGLP"},
+        "publisher": {"@type": "Organization", "name": "MedicGLP"},
+        "datePublished": "2026"
+      },
+      {
+        "@type": "Review",
+        "author": {"@type": "Person", "name": "Max W."},
+        "reviewBody": "Después de años sin resultados, MedicGLP me ha ayudado a notar avances verdaderos. Lo recomiendo totalmente.",
+        "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
+        "itemReviewed": {"@type": "Product", "name": "MedicGLP"},
+        "publisher": {"@type": "Organization", "name": "MedicGLP"},
+        "datePublished": "2026"
+      },
+      {
+        "@type": "Review",
+        "author": {"@type": "Person", "name": "Laura S."},
+        "reviewBody": "Me encanta cómo se siente MedicGLP: natural, sin efectos adversos y con una pérdida de 7 kilos sin complicaciones.",
+        "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
+        "itemReviewed": {"@type": "Product", "name": "MedicGLP"},
+        "publisher": {"@type": "Organization", "name": "MedicGLP"},
+        "datePublished": "2026"
+      },
+      {
+        "@type": "Review",
+        "author": {"@type": "Person", "name": "Thomas B."},
+        "reviewBody": "He perdido 9 kilos y sigo bajando. MedicGLP ha cambiado por completo mi salud y calidad de vida.",
+        "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
+        "itemReviewed": {"@type": "Product", "name": "MedicGLP"},
+        "publisher": {"@type": "Organization", "name": "MedicGLP"},
+        "datePublished": "2026"
+      },
+      {
+        "@type": "Review",
+        "author": {"@type": "Person", "name": "Anna H."},
+        "reviewBody": "No me siento ni hinchada ni cansada. Mi metabolismo está activado gracias a MedicGLP.",
+        "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
+        "itemReviewed": {"@type": "Product", "name": "MedicGLP"},
+        "publisher": {"@type": "Organization", "name": "MedicGLP"},
+        "datePublished": "2026"
+      },
+      {
+        "@type": "Review",
+        "author": {"@type": "Person", "name": "Jonas F."},
+        "reviewBody": "MedicGLP me ha dado esperanza y motivación. Mi objetivo de peso ya parece alcanzable.",
+        "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
+        "itemReviewed": {"@type": "Product", "name": "MedicGLP"},
+        "publisher": {"@type": "Organization", "name": "MedicGLP"},
+        "datePublished": "2026"
+      },
+      {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "reviewCount": "5000",
+        "bestRating": "5",
+        "worstRating": "1",
+        "itemReviewed": {"@type": "Product", "name": "MedicGLP"},
+        "publisher": {"@type": "Organization", "name": "MedicGLP"}
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "¿Cuándo se empiezan a notar los resultados?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Los resultados varían según la persona, pero la mayoría reporta mejoras visibles entre las 2 y 4 semanas de uso continuo acompañado de dieta y actividad física."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿MedicGLP tiene efectos secundarios?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Generalmente es bien tolerado, aunque algunas personas pueden experimentar molestias digestivas leves o reacciones alérgicas. Se recomienda consultar con el médico ante cualquier duda."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Puedo tomar MedicGLP con otros medicamentos?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Si estás bajo tratamiento o tienes enfermedades, consulta con tu médico antes de empezar la suplementación para evitar interacciones."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Es seguro para el uso prolongado?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sí, al contener ingredientes naturales, MedicGLP se puede usar a largo plazo siguiendo las dosis recomendadas, siempre con supervisión médica si es necesario."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Es MedicGLP un medicamento?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No, es un complemento alimenticio diseñado para apoyar el metabolismo y el control de peso, no reemplaza tratamientos médicos."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <!-- Sticky Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-glass sticky-top py-2">
+    <div class="container">
+      <a class="navbar-brand fw-bold fs-3" href="#" style="color: var(--primary);">
+        <i class="fa-solid fa-leaf me-2"></i>MedicGLP
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-label="Abrir navegación">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarMain">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-3">
+          <li class="nav-item"><a class="nav-link" href="#descubrimiento">Descubrimiento</a></li>
+          <li class="nav-item"><a class="nav-link" href="#beneficios">Beneficios</a></li>
+          <li class="nav-item"><a class="nav-link" href="#ingredientes">Ingredientes</a></li>
+          <li class="nav-item"><a class="nav-link" href="#testimonios">Testimonios</a></li>
+          <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
+        </ul>
+        <a href="https://www.firewolftrack.com/329S9ZBB/24QRJK1Q/" rel="nofollow sponsored" target="_self" class="btn-cta">Pedir Ahora</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="container">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-6">
+          <span class="badge-feature mb-3 d-inline-block"><i class="fa-solid fa-star me-1"></i> 4.8 · +5.000 clientes satisfechos</span>
+          <h1 class="display-4 fw-bolder mb-3">Revoluciona tu Metabolismo de Forma Natural con MedicGLP</h1>
+          <p class="lead fs-5 mb-4">La fórmula 100% natural que regula tu apetito, activa tu energía y transforma tu salud metabólica sin estimulantes agresivos.</p>
+          <ul class="list-unstyled mb-4">
+            <li class="mb-2"><i class="fa-solid fa-circle-check text-success me-2"></i>Controla los antojos y el hambre nerviosa</li>
+            <li class="mb-2"><i class="fa-solid fa-circle-check text-success me-2"></i>Aumenta la energía diaria de forma sostenida</li>
+            <li class="mb-2"><i class="fa-solid fa-circle-check text-success me-2"></i>Apoya la pérdida de peso y el equilibrio hormonal</li>
+          </ul>
+          <a href="https://www.firewolftrack.com/329S9ZBB/24QRJK1Q/" rel="nofollow sponsored" target="_self" class="btn-cta btn-lg"><i class="fa-solid fa-cart-shopping me-2"></i>Obtén MedicGLP Ahora</a>
+        </div>
+        <div class="col-lg-6 text-center">
+          <!-- Imagem Local 1: Topo / Hero -->
+          <img src="medicglp.png" alt="MedicGLP Suplemento Natural" class="img-fluid rounded-5 shadow-lg" style="max-width: 90%; object-fit: contain;">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Scientific Discovery (Story) -->
+  <section id="descubrimiento" class="py-5 section-alt">
+    <div class="container py-4">
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+          <h2 class="fw-bold mb-4 text-center">El Descubrimiento Científico que Cambia las Reglas del Metabolismo</h2>
+          <p class="fs-5 mb-4">Durante años, los expertos en nutrición han buscado una solución integral que aborde las causas profundas del metabolismo lento: los picos de glucosa, la resistencia a la insulina, la inflamación silenciosa y el desequilibrio hormonal. MedicGLP nace de la sinergia de seis ingredientes naturales respaldados por la ciencia, diseñados para trabajar en conjunto y restaurar la capacidad innata del cuerpo para quemar grasa, controlar el apetito y generar energía limpia.</p>
+          <p class="fs-5 mb-4">A diferencia de los estimulantes convencionales que solo enmascaran el cansancio, MedicGLP actúa a nivel celular: la <strong>berberina</strong> y el <strong>picolinato de cromo</strong> mejoran la sensibilidad a la insulina y estabilizan la glucosa en sangre, evitando los temidos bajones de energía. El <strong>extracto de té verde</strong> y la <strong>L-carnitina</strong> aceleran la termogénesis y la oxidación de grasas, mientras que la <strong>coenzima Q10</strong> y el <strong>complejo de vitaminas B</strong> potencian la producción de ATP, la moneda energética del organismo.</p>
+          <p class="fs-5 mb-4">El resultado es un metabolismo más eficiente, una reducción significativa de los antojos por azúcares y una sensación de vitalidad que se mantiene durante todo el día. Todo ello sin gluten, sin OGM y sin aditivos artificiales, fabricado en instalaciones certificadas bajo los más estrictos controles de calidad.</p>
+          <p class="fs-5">Más de 5.000 personas ya han integrado MedicGLP en su rutina diaria y reportan mejoras visibles en su composición corporal, digestión y claridad mental. La ciencia y la naturaleza se unen para ofrecerte una herramienta real y sostenible.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Product Showcase -->
+  <section class="py-5" style="background: linear-gradient(120deg, #e9f5ec 0%, #d0efe0 100%);">
+    <div class="container py-4">
+      <div class="row align-items-center g-5">
+        <div class="col-md-6 text-center">
+          <!-- Imagem Local 2: Meio / Showcase -->
+          <img src="medicglp.png" alt="MedicGLP Frasco" loading="lazy" decoding="async" class="img-fluid rounded-5 shadow-lg" style="max-width: 80%;">
+        </div>
+        <div class="col-md-6">
+          <h2 class="fw-bold mb-4">MedicGLP: Tu Aliado Metabólico Diario</h2>
+          <ul class="list-unstyled fs-5">
+            <li class="mb-3"><i class="fa-solid fa-bolt text-primary me-2"></i> <strong>Energía sostenida</strong> sin nerviosismo ni caídas bruscas.</li>
+            <li class="mb-3"><i class="fa-solid fa-cake-candles text-primary me-2"></i> <strong>Control de antojos</strong> y reducción del hambre emocional.</li>
+            <li class="mb-3"><i class="fa-solid fa-fire text-primary me-2"></i> <strong>Termogénesis activa</strong> que acelera la quema de grasa.</li>
+            <li class="mb-3"><i class="fa-solid fa-seedling text-primary me-2"></i> <strong>Digestión mejorada</strong> y menor hinchazón abdominal.</li>
+            <li class="mb-3"><i class="fa-solid fa-brain text-primary me-2"></i> <strong>Claridad mental</strong> y equilibrio hormonal.</li>
+            <li class="mb-3"><i class="fa-solid fa-shield-halved text-primary me-2"></i> <strong>Protección antioxidante</strong> celular.</li>
+          </ul>
+          <a href="https://www.firewolftrack.com/329S9ZBB/24QRJK1Q/" rel="nofollow sponsored" target="_self" class="btn-cta mt-3">Quiero Transformar Mi Metabolismo</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ingredients Grid -->
+  <section id="ingredientes" class="py-5">
+    <div class="container py-4">
+      <h2 class="fw-bold text-center mb-5">Ingredientes Naturales de Alta Potencia</h2>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4">
+          <div class="card-custom p-4 h-100 text-center">
+            <i class="fa-solid fa-leaf fa-3x mb-3" style="color: var(--primary);"></i>
+            <h5 class="fw-bold">Berberina</h5>
+            <p class="text-muted">Mejora la sensibilidad a la insulina y ayuda a estabilizar los niveles de glucosa, clave para un metabolismo eficiente.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="card-custom p-4 h-100 text-center">
+            <i class="fa-solid fa-mug-hot fa-3x mb-3" style="color: var(--primary);"></i>
+            <h5 class="fw-bold">Extracto de Té Verde</h5>
+            <p class="text-muted">Rico en catequinas, acelera la termogénesis y la oxidación de grasas de forma natural.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="card-custom p-4 h-100 text-center">
+            <i class="fa-solid fa-atom fa-3x mb-3" style="color: var(--primary);"></i>
+            <h5 class="fw-bold">Picolinato de Cromo</h5>
+            <p class="text-muted">Contribuye al metabolismo normal de los macronutrientes y al mantenimiento de niveles normales de glucosa.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="card-custom p-4 h-100 text-center">
+            <i class="fa-solid fa-battery-full fa-3x mb-3" style="color: var(--primary);"></i>
+            <h5 class="fw-bold">Coenzima Q10</h5>
+            <p class="text-muted">Potente antioxidante que apoya la producción de energía celular (ATP) y protege contra el estrés oxidativo.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="card-custom p-4 h-100 text-center">
+            <i class="fa-solid fa-dumbbell fa-3x mb-3" style="color: var(--primary);"></i>
+            <h5 class="fw-bold">L-Carnitina</h5>
+            <p class="text-muted">Transporta los ácidos grasos a las mitocondrias para ser utilizados como combustible, favoreciendo la quema de grasa.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="card-custom p-4 h-100 text-center">
+            <i class="fa-solid fa-capsules fa-3x mb-3" style="color: var(--primary);"></i>
+            <h5 class="fw-bold">Complejo de Vitaminas B</h5>
+            <p class="text-muted">Esenciales para convertir los alimentos en energía, apoyan el sistema nervioso y reducen la fatiga.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bonuses / Beneficios Exclusivos -->
+  <section id="beneficios" class="py-5 section-alt">
+    <div class="container py-4">
+      <h2 class="fw-bold text-center mb-5">Beneficios Exclusivos al Pedir Hoy</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card-custom p-4 text-center h-100">
+            <i class="fa-solid fa-truck-fast fa-3x mb-3" style="color: var(--primary);"></i>
+            <h5 class="fw-bold">Envío Gratuito</h5>
+            <p class="text-muted">Recibe tu pedido directamente en casa sin costes adicionales. Rápido y seguro.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card-custom p-4 text-center h-100">
+            <img src="https://images.flowpagestool.com/static/guarantee/es/30d.png" alt="Garantía 30 días" loading="lazy" decoding="async" style="width: 100px;" class="mb-3">
+            <h5 class="fw-bold">Garantía de 30 Días</h5>
+            <p class="text-muted">Si no estás satisfecho, te devolvemos tu dinero. Sin preguntas, sin complicaciones.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card-custom p-4 text-center h-100">
+            <i class="fa-solid fa-lock fa-3x mb-3" style="color: var(--primary);"></i>
+            <h5 class="fw-bold">Pago 100% Seguro</h5>
+            <p class="text-muted">Transacciones cifradas con Klarna y los más altos estándares de seguridad.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Scam Alert -->
+  <section class="py-5">
+    <div class="container py-4">
+      <div class="scam-alert p-4 p-md-5">
+        <div class="row align-items-center">
+          <div class="col-md-8">
+            <h3 class="fw-bold text-danger"><i class="fa-solid fa-triangle-exclamation me-2"></i>¡Alerta! No Caigas en Imitaciones</h3>
+            <p class="fs-5 mb-0">MedicGLP solo se vende a través de su <strong>sitio oficial</strong>. Hemos detectado copias fraudulentas en otros marketplaces que no cumplen con los estándares de calidad ni ofrecen garantía. Protege tu salud y tu inversión: adquiere el producto original únicamente desde esta página.</p>
+          </div>
+          <div class="col-md-4 text-center mt-3 mt-md-0">
+            <a href="https://www.firewolftrack.com/329S9ZBB/24QRJK1Q/" rel="nofollow sponsored" target="_self" class="btn-cta">Comprar Original Ahora</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Shipping & Guarantee (Dark) -->
+  <section class="py-5 section-dark">
+    <div class="container py-4 text-center">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <img src="https://images.flowpagestool.com/static/guarantee/es/30d.png" alt="Garantía de devolución 30 días" loading="lazy" decoding="async" style="width: 140px;" class="mb-4">
+          <h2 class="fw-bold mb-3">Tu Compra está 100% Protegida</h2>
+          <p class="fs-5 mb-4">Sabemos que quieres resultados reales. Por eso, MedicGLP ofrece una <strong>garantía de devolución de dinero de 30 días</strong>. Si por cualquier motivo no quedas satisfecho, te reembolsamos el importe íntegro. Sin letra pequeña.</p>
+          <p class="fs-5 mb-4"><i class="fa-solid fa-box me-2"></i> Envío gratuito a todo el país · Soporte al cliente 24/7 · Pago seguro con Klarna</p>
+          <a href="https://www.firewolftrack.com/329S9ZBB/24QRJK1Q/" rel="nofollow sponsored" target="_self" class="btn-cta btn-lg">Probar MedicGLP Sin Riesgo</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section id="testimonios" class="py-5 section-alt">
+    <div class="container py-4">
+      <h2 class="fw-bold text-center mb-5">Historias Reales de Transformación</h2>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4">
+          <div class="card-custom p-4 h-100">
+            <div class="d-flex align-items-center mb-3">
+              <img src="https://images.flowpagestool.com/static/avatars/female/adult/1.jpg" alt="Lisa K." loading="lazy" decoding="async" class="rounded-circle me-3" width="50" height="50" style="object-fit: cover;">
+              <div>
+                <h6 class="fw-bold mb-0">Lisa K.</h6>
+                <small class="text-muted">Comprador verificado</small>
+              </div>
+            </div>
+            <div class="text-warning mb-2">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <h5 class="fw-semibold">Resultados visibles en un mes</h5>
+            <p class="text-muted">"Gracias a MedicGLP he perdido 5 kilos en solo un mes. Me siento llena de energía y con mucha más confianza en mí misma."</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="card-custom p-4 h-100">
+            <div class="d-flex align-items-center mb-3">
+              <img src="https://images.flowpagestool.com/static/avatars/male/adult/2.jpg" alt="Max W." loading="lazy" decoding="async" class="rounded-circle me-3" width="50" height="50" style="object-fit: cover;">
+              <div>
+                <h6 class="fw-bold mb-0">Max W.</h6>
+                <small class="text-muted">Comprador verificado</small>
+              </div>
+            </div>
+            <div class="text-warning mb-2">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <h5 class="fw-semibold">Progreso real tras años de intentos</h5>
+            <p class="text-muted">"Después de años sin resultados, MedicGLP me ha ayudado a notar avances verdaderos. Lo recomiendo totalmente."</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="card-custom p-4 h-100">
+            <div class="d-flex align-items-center mb-3">
+              <img src="https://images.flowpagestool.com/static/avatars/female/adult/3.jpg" alt="Laura S." loading="lazy" decoding="async" class="rounded-circle me-3" width="50" height="50" style="object-fit: cover;">
+              <div>
+                <h6 class="fw-bold mb-0">Laura S.</h6>
+                <small class="text-muted">Comprador verificado</small>
+              </div>
+            </div>
+            <div class="text-warning mb-2">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <h5 class="fw-semibold">Natural y sin efectos secundarios</h5>
+            <p class="text-muted">"Me encanta cómo se siente MedicGLP: natural, sin efectos adversos y con una pérdida de 7 kilos sin complicaciones."</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="card-custom p-4 h-100">
+            <div class="d-flex align-items-center mb-3">
+              <img src="https://images.flowpagestool.com/static/avatars/male/adult/4.jpg" alt="Thomas B." loading="lazy" decoding="async" class="rounded-circle me-3" width="50" height="50" style="object-fit: cover;">
+              <div>
+                <h6 class="fw-bold mb-0">Thomas B.</h6>
+                <small class="text-muted">Comprador verificado</small>
+              </div>
+            </div>
+            <div class="text-warning mb-2">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <h5 class="fw-semibold">Transformó mi vida y salud</h5>
+            <p class="text-muted">"He perdido 9 kilos y sigo bajando. MedicGLP ha cambiado por completo mi salud y calidad de vida."</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="card-custom p-4 h-100">
+            <div class="d-flex align-items-center mb-3">
+              <img src="https://images.flowpagestool.com/static/avatars/female/adult/5.jpg" alt="Anna H." loading="lazy" decoding="async" class="rounded-circle me-3" width="50" height="50" style="object-fit: cover;">
+              <div>
+                <h6 class="fw-bold mb-0">Anna H.</h6>
+                <small class="text-muted">Comprador verificado</small>
+              </div>
+            </div>
+            <div class="text-warning mb-2">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <h5 class="fw-semibold">Menos hinchazón y más energía</h5>
+            <p class="text-muted">"No me siento ni hinchada ni cansada. Mi metabolismo está activado gracias a MedicGLP."</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="card-custom p-4 h-100">
+            <div class="d-flex align-items-center mb-3">
+              <img src="https://images.flowpagestool.com/static/avatars/male/adult/6.jpg" alt="Jonas F." loading="lazy" decoding="async" class="rounded-circle me-3" width="50" height="50" style="object-fit: cover;">
+              <div>
+                <h6 class="fw-bold mb-0">Jonas F.</h6>
+                <small class="text-muted">Comprador verificado</small>
+              </div>
+            </div>
+            <div class="text-warning mb-2">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <h5 class="fw-semibold">La mejor decisión del año</h5>
+            <p class="text-muted">"MedicGLP me ha dado esperanza y motivación. Mi objetivo de peso ya parece alcanzable."</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="py-5">
+    <div class="container py-4">
+      <h2 class="fw-bold text-center mb-5">Preguntas Frecuentes</h2>
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="accordion" id="faqAccordion">
+            <div class="accordion-item">
+              <h3 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                  ¿Cuándo se empiezan a notar los resultados?
+                </button>
+              </h3>
+              <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">Los resultados varían según la persona, pero la mayoría reporta mejoras visibles entre las 2 y 4 semanas de uso continuo acompañado de dieta y actividad física.</div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h3 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                  ¿MedicGLP tiene efectos secundarios?
+                </button>
+              </h3>
+              <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">Generalmente es bien tolerado, aunque algunas personas pueden experimentar molestias digestivas leves o reacciones alérgicas. Se recomienda consultar con el médico ante cualquier duda.</div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h3 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                  ¿Puedo tomar MedicGLP con otros medicamentos?
+                </button>
+              </h3>
+              <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">Si estás bajo tratamiento o tienes enfermedades, consulta con tu médico antes de empezar la suplementación para evitar interacciones.</div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h3 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                  ¿Es seguro para el uso prolongado?
+                </button>
+              </h3>
+              <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">Sí, al contener ingredientes naturales, MedicGLP se puede usar a largo plazo siguiendo las dosis recomendadas, siempre con supervisión médica si es necesario.</div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h3 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
+                  ¿Es MedicGLP un medicamento?
+                </button>
+              </h3>
+              <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">No, es un complemento alimenticio diseñado para apoyar el metabolismo y el control de peso, no reemplaza tratamientos médicos.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-5 section-dark">
+    <div class="container text-center">
+      <div class="mb-3">
+        <span class="fw-bold fs-4"><i class="fa-solid fa-leaf me-2"></i>MedicGLP</span>
+      </div>
+      <div class="d-flex flex-wrap justify-content-center gap-3 mb-4">
+        <button type="button" class="btn btn-link text-white-50" data-compliance-open="privacy">Política de Privacidad</button>
+        <button type="button" class="btn btn-link text-white-50" data-compliance-open="terms">Términos y Condiciones</button>
+        <button type="button" class="btn btn-link text-white-50" data-compliance-open="about">Sobre Nosotros</button>
+        <button type="button" class="btn btn-link text-white-50" data-compliance-open="contact">Contacto</button>
+      </div>
+      <p class="text-white-50 small mb-0">© 2026 MedicGLP. Todos los derechos reservados. Este sitio no vende directamente el producto; las compras se realizan a través del vendedor oficial.</p>
+    </div>
+  </footer>
+
+  <!-- Compliance Modals -->
+  <div data-compliance-modal="privacy" hidden>
+    <div class="modal-backdrop-custom" data-compliance-close></div>
+    <div class="modal-content-custom">
+      <button type="button" class="modal-close-btn" data-compliance-close aria-label="Cerrar modal"><i class="fa-solid fa-xmark"></i></button>
+      <h4 class="fw-bold mb-3">Política de Privacidad</h4>
+      <p>Este sitio web recopila datos de navegación y cookies para mejorar la experiencia del usuario y analizar el tráfico. No compartimos información personal con terceros sin consentimiento, salvo cuando sea requerido por ley.</p>
+      <p>Podemos utilizar enlaces de afiliados que generan una comisión si realizas una compra. Estos enlaces no afectan el precio final ni tu privacidad.</p>
+      <p>Nos reservamos el derecho de modificar esta política en cualquier momento. Te recomendamos revisarla periódicamente.</p>
+    </div>
+  </div>
+
+  <div data-compliance-modal="terms" hidden>
+    <div class="modal-backdrop-custom" data-compliance-close></div>
+    <div class="modal-content-custom">
+      <button type="button" class="modal-close-btn" data-compliance-close aria-label="Cerrar modal"><i class="fa-solid fa-xmark"></i></button>
+      <h4 class="fw-bold mb-3">Términos y Condiciones</h4>
+      <p>El contenido de este sitio tiene fines informativos y promocionales. No realizamos ventas directas ni enviamos productos; todas las transacciones se efectúan a través del vendedor oficial, sujeto a sus propios términos.</p>
+      <p>La información aquí presentada no constituye asesoramiento médico, nutricional ni profesional. Consulta siempre con un especialista antes de iniciar cualquier suplementación.</p>
+      <p>No nos hacemos responsables de decisiones tomadas con base en el contenido de esta página. El uso de la misma implica la aceptación de estas condiciones.</p>
+    </div>
+  </div>
+
+  <div data-compliance-modal="about" hidden>
+    <div class="modal-backdrop-custom" data-compliance-close></div>
+    <div class="modal-content-custom">
+      <button type="button" class="modal-close-btn" data-compliance-close aria-label="Cerrar modal"><i class="fa-solid fa-xmark"></i></button>
+      <h4 class="fw-bold mb-3">Sobre Nosotros</h4>
+      <p>Somos un sitio independiente dedicado a la promoción de productos naturales para el bienestar. No somos la marca oficial ni el fabricante de MedicGLP.</p>
+      <p>Podemos recibir una compensación por las compras realizadas a través de nuestros enlaces, lo que nos permite mantener este espacio informativo sin costo para el usuario.</p>
+      <p>Nuestro objetivo es ofrecer información veraz y útil, siempre basada en la documentación disponible del producto.</p>
+    </div>
+  </div>
+
+  <div data-compliance-modal="contact" hidden>
+    <div class="modal-backdrop-custom" data-compliance-close></div>
+    <div class="modal-content-custom">
+      <button type="button" class="modal-close-btn" data-compliance-close aria-label="Cerrar modal"><i class="fa-solid fa-xmark"></i></button>
+      <h4 class="fw-bold mb-3">Contacto</h4>
+      <p>Para consultas generales sobre este sitio, puedes escribir a: <strong>generalsupportads@gmail.com</strong></p>
+      <p>Las dudas relacionadas con pedidos, pagos, envíos o devoluciones deben dirigirse al servicio de atención al cliente del vendedor oficial, ya que nosotros no gestionamos esas operaciones.</p>
+      <p>No almacenamos información de pago ni tenemos acceso a los detalles de tu compra.</p>
+    </div>
+  </div>
+
+  <!-- Mobile Sticky CTA -->
+  <div id="fp-sticky-cta"><a href="https://www.firewolftrack.com/329S9ZBB/24QRJK1Q/" rel="nofollow sponsored" target="_self" class="btn-cta">Obtén MedicGLP Ahora</a></div>
+  
+  <script>
+    (function(){
+      var b=document.getElementById('fp-sticky-cta'),m=matchMedia('(max-width:767.98px)'),s=0;
+      function p(){document.body.style.paddingBottom=s&&m.matches?b.offsetHeight+'px':''}
+      function c(){var h=document.documentElement.scrollHeight-innerHeight;if(!s&&m.matches&&h>0&&scrollY/h>=.15){s=1;b.classList.add('fp-on');p()}}
+      addEventListener('scroll',c,{passive:true});
+      addEventListener('resize',function(){p();c()});
+      c();
+    })();
+  </script>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Compliance Script -->
+  <script>
+    document.addEventListener('click', function (e) {
+      var opener = e.target.closest('[data-compliance-open]');
+      if (opener) {
+        e.preventDefault();
+        var modal = document.querySelector('[data-compliance-modal="' + opener.getAttribute('data-compliance-open') + '"]');
+        if (modal) {
+          modal.hidden = false;
+          document.body.style.overflow = 'hidden';
+        }
+      }
+      var closer = e.target.closest('[data-compliance-close]');
+      if (closer) {
+        e.preventDefault();
+        var modalToClose = closer.closest('[data-compliance-modal]');
+        if (modalToClose) {
+          modalToClose.hidden = true;
+          document.body.style.overflow = '';
+        }
+      }
+    });
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') {
+        document.querySelectorAll('[data-compliance-modal]:not([hidden])').forEach(function (m) {
+          m.hidden = true;
+        });
+        document.body.style.overflow = '';
+      }
+    });
+  </script>
+</body>
+</html>
